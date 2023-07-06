@@ -5,5 +5,5 @@ import com.example.assignment.model.Customer;
 
 
 public interface CustomerRepository extends JpaRepository<Customer, Long>{
-
+    //Customer findByNic(String nic);
 }

@@ -1,8 +1,5 @@
 package com.example.assignment.controller;
-
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
@@ -63,15 +60,13 @@ public class CustomerController {
     }
 
     // @DeleteMapping("/customer/{id}")
-    // public Map < String, Boolean > deleteEmployee(@PathVariable(value = "id") Long employeeId)
-    // throws ResourceNotFoundException {
-    //     Employee employee = employeeRepository.findById(employeeId)
-    //         .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
-
-    //     employeeRepository.delete(employee);
-    //     Map < String, Boolean > response = new HashMap < > ();
-    //     response.put("deleted", Boolean.TRUE);
-    //     return response;
+    // public ResponseEntity deleteCustomer(@PathVariable(value = "id") Long customerID) {
+    //     Customer customer = customerRepository.findById(customerID)
+    //         .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + customerID));
+    //     customerRepository.deleteById(customerID);
+    //     return true;
+    
+    
     // }
     
 }
