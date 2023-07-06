@@ -44,6 +44,13 @@ public class CustomerController {
     return customerRepository.save(customer);
     }
 
+    //bulk save
+    @PostMapping("/customer/all")
+    List<Customer> newbulkCustomer(@RequestBody List<Customer> customers ) {
+    System.out.println(customers);
+    return customerRepository.saveAllAndFlush(customers);
+    }
+
     @PutMapping("/customer/{id}")
     public ResponseEntity < Customer > updateCustomer(@PathVariable(value = "id") Long customerID,
         @Valid @RequestBody Customer newcustomer) throws ResourceNotFoundException {
